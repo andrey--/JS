@@ -24,11 +24,15 @@
         return xmlhttp;
     }
     var xmlhttp = getXmlHttp()
-    xmlhttp.open('GET', '/xhr/test.html', false);
+    xmlhttp.open('GET', '/xhr/test.html', true);
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4) {
+            if(xmlhttp.status == 200) {
+                alert(xmlhttp.responseText);
+            }
+        }
+    };
     xmlhttp.send(null);
-    if(xmlhttp.status == 200) {
-        alert(xmlhttp.responseText);
-    }
 </script>
 </body>
 </html>
