@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+<title>Один из возможных вариантов HTML формы</title>
+<meta charset="utf-8">
 </head>
 <body>
-
+<form name="f1" method="get" action="enter_data.php">
+    <input name="link" type="hidden" value="index.php" />
+    Логин: <br />
+    <input name="login" type="text" size="25" maxlength="30" /> <br />
+    Пароль: <br />
+    <input name="pd" type="password" size="25" maxlength="30" value="" /> <br />
+    <input name="remember" type="checkbox" value="yes" /> Запомнить <br />
+    <input type="submit" name="enter" value="Вход" />
+</form>
 </body>
 </html>
