@@ -24,16 +24,18 @@
         }
         return xmlhttp;
     }
-    var xmlhttp = getXmlHttp()
-    xmlhttp.open('GET', '/xhr/test.html', true);
-    xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == 4) {
-            if(xmlhttp.status == 200) {
-                alert(xmlhttp.responseText);
-            }
-        }
-    };
+    var xmlhttp = getXmlHttp();
+    xmlhttp.open('GET', 'test.html', false);
+//    xmlhttp.onreadystatechange = function() {
+//        if (xmlhttp.readyState == 4) {
+//            if(xmlhttp.status == 200) {
+//                alert(xmlhttp.responseText);
+//            }
+//        }
+//    };
+
     xmlhttp.send(null);
+    alert(xmlhttp.status);
 </script>
 </body>
 </html>
